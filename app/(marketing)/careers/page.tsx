@@ -45,7 +45,7 @@ export default function CareersPage() {
                       <Badge variant="outline">{job.type}</Badge>
                     </div>
                   </div>
-                  <Button render={<a href="mailto:careers@vedify.com" />}>
+                  <Button render={<a href="mailto:careers@vedifytech.com" />}>
                     Apply
                   </Button>
                 </CardContent>

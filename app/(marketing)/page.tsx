@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "Vedify — Software Development Agency",
     description:
       "Vedify designs and builds web, mobile, and custom software products for startups and enterprises.",
-    url: "https://vedify.com",
+    url: "https://vedifytech.com",
     siteName: "Vedify",
     type: "website",
   },
