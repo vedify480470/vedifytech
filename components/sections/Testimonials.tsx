@@ -3,7 +3,7 @@
 import { Star } from "lucide-react";
 import { testimonials } from "@/data/testimonials";
 import { Card, CardContent } from "@/components/ui/card";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { SectionHeading } from "@/components/shared/section-heading";
 import {
   Carousel,
@@ -38,6 +38,7 @@ export function Testimonials() {
                     </p>
                     <div className="mt-6 flex items-center gap-3">
                       <Avatar>
+                        {t.image && <AvatarImage src={t.image} alt={t.name} />}
                         <AvatarFallback>
                           {t.name
                             .split(" ")

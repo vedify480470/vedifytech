@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 const skills = [
   { label: "Software Development", value: 92 },
-  { label: "Cyber Security", value: 80 },
+  { label: "App Development (Android, iPhone)", value: 80 },
   { label: "Artificial Intelligence", value: 95 },
   { label: "Web Development", value: 78 },
 ];

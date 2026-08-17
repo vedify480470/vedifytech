@@ -7,9 +7,9 @@ import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const stats = [
-  { value: "80k", label: "Happy Clients" },
-  { value: "50+", label: "Companies" },
-  { value: "230+", label: "Projects Done" },
+  { value: "20", label: "Happy Clients" },
+  { value: "30+", label: "Companies" },
+  { value: "50+", label: "Projects Done" },
 ];
 
 export function CallUsBanner() {

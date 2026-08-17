@@ -9,6 +9,7 @@ export const testimonials: Testimonial[] = [
     quote:
       "Vedify rebuilt our ecommerce platform from the ground up and cut our page load times in half. The team communicated clearly at every step.",
     rating: 5,
+    image: "/images/Sarah.jpg",
   },
   {
     id: "2",
@@ -18,6 +19,7 @@ export const testimonials: Testimonial[] = [
     quote:
       "Their engineers understood our compliance requirements immediately and delivered a hospital management system that our staff actually enjoys using.",
     rating: 5,
+    image: "/images/David.jpg",
   },
   {
     id: "3",
@@ -36,5 +38,6 @@ export const testimonials: Testimonial[] = [
     quote:
       "The custom software they built streamlined our dispatch process and saved our operations team dozens of hours every week.",
     rating: 5,
+    image: "/images/James.jpg",
   },
 ];

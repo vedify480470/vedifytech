@@ -223,10 +223,10 @@ export function Navbar() {
                   <NavigationMenuItem key={item.label}>
                     <NavigationMenuTrigger
                       className={cn(
-                        "bg-transparent hover:bg-white/10 focus:bg-white/10 data-[state=open]:bg-white/10",
+                        "bg-transparent hover:bg-white/10 focus:bg-white/10 data-open:bg-white/10 data-open:hover:bg-white/10 data-open:focus:bg-white/10 data-popup-open:bg-white/10 data-popup-open:hover:bg-white/10",
                         linkColor,
                         isScrolled &&
-                          "hover:bg-neutral-100 focus:bg-neutral-100 data-[state=open]:bg-neutral-100"
+                          "hover:bg-neutral-100 focus:bg-neutral-100 data-open:bg-neutral-100 data-open:hover:bg-neutral-100 data-open:focus:bg-neutral-100 data-popup-open:bg-neutral-100 data-popup-open:hover:bg-neutral-100"
                       )}
                     >
                       {item.label}
@@ -260,10 +260,10 @@ export function Navbar() {
                     <NavigationMenuLink
                       render={<Link href={item.href} />}
                       className={cn(
-                        "bg-transparent px-4 py-2 text-sm font-medium hover:bg-white/10 data-active:bg-transparent data-active:hover:bg-white/10 data-active:focus:bg-white/10",
+                        "bg-transparent px-4 py-2 text-sm font-medium hover:bg-white/10 focus:bg-white/10 data-active:bg-transparent data-active:hover:bg-white/10 data-active:focus:bg-white/10",
                         linkColor,
                         isScrolled &&
-                          "hover:bg-neutral-100 data-active:hover:bg-neutral-100 data-active:focus:bg-neutral-100"
+                          "hover:bg-neutral-100 focus:bg-neutral-100 data-active:hover:bg-neutral-100 data-active:focus:bg-neutral-100"
                       )}
                     >
                       {item.label}

@@ -28,7 +28,7 @@ const sections = [
   },
   {
     title: "Your Rights",
-    body: "Depending on your location, you may have the right to access, correct, or delete your personal information, or to object to or restrict certain processing. To exercise these rights, contact us at hello@vedify.com.",
+    body: "Depending on your location, you may have the right to access, correct, or delete your personal information, or to object to or restrict certain processing. To exercise these rights, contact us at info@vedify.com.",
   },
   {
     title: "Changes to This Policy",
@@ -36,7 +36,7 @@ const sections = [
   },
   {
     title: "Contact Us",
-    body: "If you have questions about this privacy policy, please contact us at hello@vedify.com.",
+    body: "If you have questions about this privacy policy, please contact us at info@vedify.com.",
   },
 ];
 
