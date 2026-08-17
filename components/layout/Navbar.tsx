@@ -45,10 +45,10 @@ function Logo({ onDark = false }: { onDark?: boolean }) {
         )}
       >
         <Image
-          src="/images/vedify-new-logo.png"
+          src="/images/vedify-solution-logo.png"
           alt={siteInfo.name}
-          width={800}
-          height={310}
+          width={1600}
+          height={592}
           priority
           className="h-11 w-auto object-contain sm:h-12"
         />
