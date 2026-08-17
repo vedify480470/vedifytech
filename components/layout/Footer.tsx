@@ -36,11 +36,11 @@ export function Footer() {
           <div>
             <Link href="/" className="inline-flex items-center">
               <Image
-                src="/images/vedify-logo.png"
+                src="/images/vedify-new-logo.png"
                 alt="Vedify"
-                width={1596}
-                height={299}
-                className="h-10 w-auto object-contain"
+                width={800}
+                height={310}
+                className="h-12 w-auto object-contain"
               />
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
