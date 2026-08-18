@@ -1,19 +1,44 @@
 import type { Metadata } from "next";
-import { Target, Eye, Heart, ShieldCheck, Users, Award } from "lucide-react";
+import {
+  Target,
+  Eye,
+  Lightbulb,
+  BadgeCheck,
+  MessageSquare,
+  Sparkles,
+  Users,
+  TrendingUp,
+  CheckCircle2,
+  Quote,
+} from "lucide-react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Learn about Vedify, our mission, values, and the team behind the work.",
+  description:
+    "Vedify Tech is a growing technology and business solutions brand under Vedify Solutions, offering IT solutions, digital marketing, and event management services.",
 };
 
+const missionPoints = [
+  "Deliver innovative and reliable IT solutions",
+  "Help businesses establish a strong digital presence",
+  "Create data-driven digital marketing strategies",
+  "Provide creative and professional event solutions",
+  "Understand the unique needs of every client",
+  "Deliver quality within practical budgets",
+  "Build long-term partnerships with clients",
+  "Continuously improve through technology and innovation",
+];
+
 const values = [
-  { icon: ShieldCheck, title: "Integrity", description: "We do what we say, and say what we mean." },
-  { icon: Users, title: "Collaboration", description: "We build with our clients, not just for them." },
-  { icon: Award, title: "Craftsmanship", description: "We sweat the details others skip." },
-  { icon: Heart, title: "Empathy", description: "We design for real people, not just requirements." },
+  { icon: Lightbulb, title: "Innovation", description: "Continuously exploring new ideas, technologies and strategies." },
+  { icon: BadgeCheck, title: "Quality", description: "Delivering reliable, professional and high-quality solutions." },
+  { icon: MessageSquare, title: "Transparency", description: "Clear communication and honest business practices." },
+  { icon: Sparkles, title: "Creativity", description: "Bringing creative thinking to digital campaigns, technology and events." },
+  { icon: Users, title: "Customer First", description: "Starting every solution by understanding the client's actual requirements." },
+  { icon: TrendingUp, title: "Growth", description: "Measuring success by the value and growth created for clients." },
 ];
 
 const team = [
@@ -31,39 +56,57 @@ export default function AboutPage() {
       <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            eyebrow="Our Story"
-            title="Building software with purpose since day one"
-            description="Vedify started as a two-person studio helping local businesses ship their first web apps. Today we're a full-service software agency partnering with startups and enterprises across healthcare, fintech, retail, and logistics."
+            eyebrow="About Vedify Tech"
+            title="A brand of Vedify Solutions"
+            description="Vedify Tech is a growing technology and business solutions brand under Vedify Solutions, offering professional IT solutions, digital marketing services and event management services to businesses, startups, organizations and brands. Our goal is simple — help businesses build, grow and connect."
           />
+          <p className="mx-auto mt-6 max-w-2xl text-center text-muted-foreground">
+            From developing a professional website or customized software to
+            building a powerful digital marketing strategy and managing
+            successful corporate events, Vedify Tech brings multiple business
+            solutions together under one roof.
+          </p>
         </div>
       </section>
 
       <section className="py-12 md:py-16 bg-muted/30">
         <div className="container mx-auto grid grid-cols-1 gap-8 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div className="rounded-2xl border border-border bg-background p-8">
-            <Target className="size-8 text-primary" />
-            <h3 className="mt-4 text-xl font-semibold">Our Mission</h3>
-            <p className="mt-2 text-muted-foreground">
-              To help ambitious teams turn ideas into reliable, well-crafted
-              software without the overhead of building an in-house team from
-              scratch.
-            </p>
-          </div>
-          <div className="rounded-2xl border border-border bg-background p-8">
             <Eye className="size-8 text-primary" />
             <h3 className="mt-4 text-xl font-semibold">Our Vision</h3>
             <p className="mt-2 text-muted-foreground">
-              To be the long-term technology partner behind the products
-              people rely on every day.
+              To become a trusted and innovative business solutions brand
+              that empowers businesses through technology, digital growth
+              and impactful experiences. We envision a future where
+              businesses can access the right combination of technology,
+              digital marketing and event solutions from one trusted
+              partner.
             </p>
+          </div>
+          <div className="rounded-2xl border border-border bg-background p-8">
+            <Target className="size-8 text-primary" />
+            <h3 className="mt-4 text-xl font-semibold">Our Mission</h3>
+            <p className="mt-2 text-muted-foreground">
+              Our mission is to help businesses build stronger brands, adopt
+              smarter technology and create meaningful connections with
+              their customers.
+            </p>
+            <ul className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
+              {missionPoints.map((point) => (
+                <li key={point} className="flex items-start gap-2 text-sm">
+                  <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-primary" />
+                  <span className="text-muted-foreground">{point}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
 
       <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading eyebrow="Values" title="What guides our work" />
-          <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <SectionHeading eyebrow="Core Values" title="What guides our work" />
+          <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {values.map((value) => (
               <div key={value.title} className="text-center">
                 <div className="mx-auto flex size-12 items-center justify-center rounded-xl bg-primary/10">
@@ -81,7 +124,7 @@ export default function AboutPage() {
 
       <section className="py-12 md:py-16 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading eyebrow="Team" title="The people behind Vedify" />
+          <SectionHeading eyebrow="Team" title="The people behind Vedify Tech" />
           <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {team.map((member) => (
               <div key={member.name} className="flex items-center gap-4 rounded-xl border border-border bg-background p-4">
@@ -96,6 +139,24 @@ export default function AboutPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl rounded-2xl bg-gradient-to-br from-[#03228f] to-[#5b8def] p-10 text-center text-white">
+            <Quote className="mx-auto size-8 text-white/70" />
+            <h3 className="mt-4 text-xl font-bold">Our Promise</h3>
+            <p className="mt-3 text-white/80">
+              At Vedify Tech, we believe every business deserves solutions
+              that are smart, practical and scalable. We listen to your
+              requirements, understand your challenges and create solutions
+              designed around your business goals.
+            </p>
+            <p className="mt-4 font-semibold">
+              Your business goals become our project goals.
+            </p>
           </div>
         </div>
       </section>

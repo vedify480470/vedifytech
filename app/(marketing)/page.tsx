@@ -11,15 +11,15 @@ import { FAQ } from "@/components/sections/FAQ";
 import { CTA } from "@/components/sections/CTA";
 
 export const metadata: Metadata = {
-  title: "Vedify — Software Development Agency",
+  title: "Vedify Tech — Technology, Digital Marketing & Event Management",
   description:
-    "Vedify designs and builds web, mobile, and custom software products for startups and enterprises.",
+    "Vedify Tech is a Prayagraj-based technology, digital marketing, and event management company helping businesses build, grow, and connect. A brand of Vedify Solutions.",
   openGraph: {
-    title: "Vedify — Software Development Agency",
+    title: "Vedify Tech — Technology, Digital Marketing & Event Management",
     description:
-      "Vedify designs and builds web, mobile, and custom software products for startups and enterprises.",
+      "Vedify Tech is a Prayagraj-based technology, digital marketing, and event management company helping businesses build, grow, and connect. A brand of Vedify Solutions.",
     url: "https://vedifytech.com",
-    siteName: "Vedify",
+    siteName: "Vedify Tech",
     type: "website",
   },
 };

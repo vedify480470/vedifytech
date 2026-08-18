@@ -25,14 +25,23 @@ export function Hero() {
 
       <div className="container relative mx-auto grid grid-cols-1 items-center gap-10 px-4 sm:px-6 lg:grid-cols-[1.1fr_1fr] lg:gap-12 lg:px-10">
         <div className="text-white">
+          <motion.span
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-block rounded-full border border-white/30 bg-white/10 px-4 py-1.5 text-xs font-semibold tracking-wide sm:text-sm"
+          >
+            Technology &bull; Digital Marketing &bull; Event Management
+          </motion.span>
+
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="max-w-2xl text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl"
+            className="mt-5 max-w-2xl text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl"
           >
-            <span className="block whitespace-nowrap">Software Solutions</span>
-            <span className="block whitespace-nowrap">For Your Business</span>
+            <span className="block whitespace-nowrap">Build, Grow</span>
+            <span className="block whitespace-nowrap">&amp; Connect</span>
           </motion.h1>
 
           <motion.p
@@ -41,8 +50,9 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="mt-6 max-w-md text-lg text-white/80"
           >
-            We are a leading technology solutions company serving clients
-            worldwide for over 10 years.
+            Vedify Tech brings IT solutions, digital marketing, and event
+            management together under one roof to help your business build,
+            grow, and connect.
           </motion.p>
 
           <motion.div

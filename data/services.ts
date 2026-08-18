@@ -1,4 +1,13 @@
-import { Code2, Smartphone, Layers, Cloud, LifeBuoy, PenTool } from "lucide-react";
+import {
+  Code2,
+  Smartphone,
+  Layers,
+  Cloud,
+  LifeBuoy,
+  PenTool,
+  Megaphone,
+  PartyPopper,
+} from "lucide-react";
 import type { Service } from "@/types";
 
 export const services: Service[] = [
@@ -95,6 +104,43 @@ export const services: Service[] = [
       "Visual Design",
       "Usability Testing",
       "Design Systems",
+    ],
+  },
+  {
+    id: "7",
+    slug: "digital-marketing",
+    title: "Digital Marketing",
+    shortDescription: "Build your online presence and generate real business opportunities.",
+    description:
+      "We help businesses build their online presence, reach potential customers, and generate business opportunities through strategic, data-driven digital marketing.",
+    icon: Megaphone,
+    image: "/images/3.png",
+    features: [
+      "Search Engine Optimization (SEO)",
+      "Social Media Marketing",
+      "Google Ads & Online Advertising",
+      "Content Marketing",
+      "Graphic Design & Creative Branding",
+      "Lead Generation",
+      "Digital Marketing Strategy",
+    ],
+  },
+  {
+    id: "8",
+    slug: "event-management",
+    title: "Event Management",
+    shortDescription: "Professional planning and execution for memorable brand experiences.",
+    description:
+      "We provide professional planning and execution for corporate, promotional, and business events, helping brands create memorable experiences and meaningful connections.",
+    icon: PartyPopper,
+    image: "/images/5.png",
+    features: [
+      "Corporate Events",
+      "Product Launches",
+      "Exhibitions & Trade Shows",
+      "Brand Promotions & Activations",
+      "Conferences & Seminars",
+      "Social & Special Events",
     ],
   },
 ];

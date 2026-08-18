@@ -7,7 +7,8 @@ import { SectionHeading } from "@/components/shared/section-heading";
 
 export const metadata: Metadata = {
   title: "Services",
-  description: "Explore the full range of software development services Vedify offers.",
+  description:
+    "IT solutions, digital marketing, and event management services from Vedify Tech — everything a business needs to build, grow, and connect.",
 };
 
 export default function ServicesPage() {
@@ -16,8 +17,8 @@ export default function ServicesPage() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Services"
-          title="Everything you need to ship software"
-          description="From design to development to long-term support, we cover the full product lifecycle."
+          title="Build, Grow & Connect"
+          description="IT solutions, digital marketing, and event management — everything your business needs, under one roof."
         />
 
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

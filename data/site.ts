@@ -1,8 +1,10 @@
 export const siteInfo = {
-  name: "Vedify",
-  address: "123 Market Street, San Francisco, CA 94103",
+  name: "Vedify Tech",
+  tagline: "Technology • Digital Marketing • Event Management",
+  parentBrand: "A Brand of Vedify Solutions",
+  address: "Prayagraj, Uttar Pradesh, India",
   email: "info@vedifytech.com",
-  phone: "+1 (555) 010-2030",
+  phone: "+91 98765 43210",
   openingHours: "10:00 - 18:00",
   socials: [
     { label: "Facebook", href: "#" },

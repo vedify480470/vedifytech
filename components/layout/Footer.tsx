@@ -62,7 +62,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-bold">IT Services</h3>
+            <h3 className="text-lg font-bold">Our Services</h3>
             <ul className="mt-5 flex flex-col gap-3">
               {services.map((service) => (
                 <li key={service.slug}>

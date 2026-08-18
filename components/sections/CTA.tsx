@@ -8,11 +8,12 @@ export function CTA() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden rounded-3xl bg-primary px-6 py-16 text-center sm:px-16">
           <h2 className="text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl">
-            Ready to build something great?
+            Ready to Build, Grow &amp; Connect?
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-primary-foreground/80">
-            Tell us about your project and we&apos;ll get back to you within one
-            business day.
+            Whether you need a website, software solution, digital marketing
+            strategy, or a professionally managed event, Vedify Tech is
+            ready to help.
           </p>
           <Button
             size="lg"
