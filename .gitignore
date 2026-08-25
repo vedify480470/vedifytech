@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local AI assistant skills (installed via ui-ux-pro-max-cli)
+/.claude/

@@ -4,7 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, MapPin, Mail, Phone, Search, Plus } from "lucide-react";
+import { Menu, MapPin, Mail, Phone, Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { navItems } from "@/data/nav";
 import { services } from "@/data/services";
@@ -275,24 +275,6 @@ export function Navbar() {
           </NavigationMenu>
 
           <div className="flex shrink-0 items-center gap-4">
-            <button
-              type="button"
-              aria-label="Search"
-              className={cn(
-                "transition",
-                isScrolled
-                  ? "text-neutral-700 hover:text-primary"
-                  : "text-white/90 hover:text-white"
-              )}
-            >
-              <Search className="size-4" />
-            </button>
-            <span
-              className={cn(
-                "h-5 w-px",
-                isScrolled ? "bg-neutral-300" : "bg-white/30"
-              )}
-            />
             <div className="flex items-center gap-3">
               {socialIcons.map((Icon, i) => (
                 <a

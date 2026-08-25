@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { services } from "@/data/services";
 
@@ -38,14 +37,8 @@ export function Services() {
                 href={`/services/${service.slug}`}
                 className="block h-full rounded-2xl bg-white p-8 shadow-md transition-shadow hover:shadow-xl"
               >
-                <div className="flex size-20 items-center justify-center">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    width={96}
-                    height={96}
-                    className="size-full object-contain"
-                  />
+                <div className="flex size-16 items-center justify-center rounded-2xl bg-primary/10">
+                  <service.icon className="size-8 text-primary" aria-hidden="true" />
                 </div>
                 <h3 className="mt-6 text-xl font-bold">{service.title}</h3>
                 <p className="mt-3 text-muted-foreground">

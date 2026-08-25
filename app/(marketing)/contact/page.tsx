@@ -65,7 +65,7 @@ export default function ContactPage() {
       <div className="h-[420px] w-full">
         <iframe
           title="Office location"
-          src="https://maps.google.com/maps?q=San+Francisco&output=embed"
+          src={`https://maps.google.com/maps?q=${encodeURIComponent(siteInfo.address)}&output=embed`}
           width="100%"
           height="100%"
           loading="lazy"

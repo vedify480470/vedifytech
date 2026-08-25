@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
 const skills = [
@@ -13,6 +13,8 @@ const skills = [
 ];
 
 export function AboutSummary() {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <section className="overflow-hidden py-14 sm:py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,7 +28,7 @@ export function AboutSummary() {
               className="absolute left-0 top-0 z-0 h-52 w-48 overflow-hidden rounded-2xl shadow-lg sm:h-60 sm:w-56"
             >
               <motion.div
-                animate={{ y: [0, -10, 0] }}
+                animate={shouldReduceMotion ? undefined : { y: [0, -10, 0] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                 className="relative size-full"
               >
@@ -47,7 +49,7 @@ export function AboutSummary() {
               className="absolute left-1/4 top-16 z-10 h-96 w-80 overflow-hidden rounded-2xl shadow-xl sm:h-[28rem] sm:w-96"
             >
               <motion.div
-                animate={{ y: [0, -14, 0] }}
+                animate={shouldReduceMotion ? undefined : { y: [0, -14, 0] }}
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
                 className="relative size-full"
               >
@@ -68,7 +70,7 @@ export function AboutSummary() {
               className="absolute bottom-0 left-0 z-0 h-56 w-64 overflow-hidden rounded-2xl shadow-lg sm:h-64 sm:w-72"
             >
               <motion.div
-                animate={{ y: [0, -8, 0] }}
+                animate={shouldReduceMotion ? undefined : { y: [0, -8, 0] }}
                 transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.6 }}
                 className="relative size-full"
               >
@@ -109,11 +111,11 @@ export function AboutSummary() {
                   </div>
                   <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-muted">
                     <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${skill.value}%` }}
+                      initial={{ scaleX: 0 }}
+                      whileInView={{ scaleX: skill.value / 100 }}
                       viewport={{ once: true }}
                       transition={{ duration: 1, ease: "easeOut" }}
-                      className="h-full rounded-full bg-gradient-to-r from-[#03228f] to-[#0e73e4]"
+                      className="h-full w-full origin-left rounded-full bg-gradient-to-r from-[#03228f] to-[#0e73e4]"
                     />
                   </div>
                 </div>

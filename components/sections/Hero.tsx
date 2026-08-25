@@ -1,9 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Play } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { AppointmentForm } from "@/components/sections/AppointmentForm";
+import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
@@ -40,8 +42,8 @@ export function Hero() {
             transition={{ duration: 0.6 }}
             className="mt-5 max-w-2xl text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl"
           >
-            <span className="block whitespace-nowrap">Build, Grow</span>
-            <span className="block whitespace-nowrap">&amp; Connect</span>
+            <span className="block">Build, Grow</span>
+            <span className="block">&amp; Connect</span>
           </motion.h1>
 
           <motion.p
@@ -59,33 +61,16 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-10 flex items-center gap-4"
+            className="mt-10"
           >
-            <button
-              type="button"
-              aria-label="Play video"
-              className="relative flex size-16 items-center justify-center rounded-full bg-gradient-to-r from-[#03228f] to-[#0e73e4] shadow-lg transition hover:scale-105"
+            <Button
+              size="lg"
+              className="rounded-full bg-gradient-to-r from-[#03228f] to-[#0e73e4] hover:opacity-90"
+              render={<Link href="/contact" />}
             >
-              <motion.span
-                className="absolute inset-0 rounded-full border-2 border-primary"
-                animate={{ scale: [1, 1.6], opacity: [0.6, 0] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeOut" }}
-              />
-              <motion.span
-                className="absolute inset-0 rounded-full border-2 border-primary"
-                animate={{ scale: [1, 2.1], opacity: [0.5, 0] }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeOut",
-                  delay: 0.6,
-                }}
-              />
-              <Play className="relative ml-1 size-6 fill-white text-white" />
-            </button>
-            <span className="text-sm font-medium text-white/80">
-              Watch how we work
-            </span>
+              Start a Project
+              <ArrowRight className="size-4" />
+            </Button>
           </motion.div>
         </div>
 

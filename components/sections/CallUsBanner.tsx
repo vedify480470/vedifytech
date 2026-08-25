@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { siteInfo } from "@/data/site";
 
 const stats = [
   { value: "20", label: "Happy Clients" },
@@ -13,6 +14,8 @@ const stats = [
 ];
 
 export function CallUsBanner() {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <section className="relative overflow-hidden bg-[#000060] pt-16 sm:pt-20">
       <Image
@@ -49,21 +52,25 @@ export function CallUsBanner() {
             className="pb-12 text-center text-white lg:pb-24 lg:text-right"
           >
             <div className="relative mx-auto flex size-20 items-center justify-center rounded-full bg-white/10 lg:ml-auto lg:mr-0">
-              <motion.span
-                className="absolute inset-0 rounded-full border-2 border-white/40"
-                animate={{ scale: [1, 1.5], opacity: [0.6, 0] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeOut" }}
-              />
-              <motion.span
-                className="absolute inset-0 rounded-full border-2 border-white/40"
-                animate={{ scale: [1, 2], opacity: [0.5, 0] }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeOut",
-                  delay: 0.6,
-                }}
-              />
+              {!shouldReduceMotion && (
+                <>
+                  <motion.span
+                    className="absolute inset-0 rounded-full border-2 border-white/40"
+                    animate={{ scale: [1, 1.5], opacity: [0.6, 0] }}
+                    transition={{ duration: 2, repeat: Infinity, ease: "easeOut" }}
+                  />
+                  <motion.span
+                    className="absolute inset-0 rounded-full border-2 border-white/40"
+                    animate={{ scale: [1, 2], opacity: [0.5, 0] }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeOut",
+                      delay: 0.6,
+                    }}
+                  />
+                </>
+              )}
               <div className="relative flex size-14 items-center justify-center rounded-full bg-white">
                 <Phone className="size-6 text-primary" />
               </div>
@@ -72,9 +79,12 @@ export function CallUsBanner() {
             <p className="mt-3 text-sm font-bold tracking-wider text-white/80">
               CALL US 24/7
             </p>
-            <p className="mt-1 text-4xl font-bold sm:text-5xl">
-              (+123) 456-9989
-            </p>
+            <a
+              href={`tel:${siteInfo.phone.replace(/\s+/g, "")}`}
+              className="mt-1 block text-4xl font-bold transition hover:opacity-80 sm:text-5xl"
+            >
+              {siteInfo.phone}
+            </a>
 
             <p className="mx-auto mt-6 max-w-md text-white/70 lg:ml-auto lg:mr-0">
               Have any idea or project for in your mind call us or schedule
