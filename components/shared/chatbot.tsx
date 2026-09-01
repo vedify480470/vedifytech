@@ -19,9 +19,21 @@ const SEEN_KEY = "vedify-chat-seen";
 const OUT_OF_SCOPE_REPLY =
   "Sorry, this is out of context — we can't answer that or provide this kind of service here. I can only help with our services, company info, address, phone number, or contact details.";
 
+function WaveEmoji() {
+  return (
+    <motion.span
+      className="inline-block origin-[70%_70%]"
+      animate={{ rotate: [0, 18, -8, 18, -4, 0] }}
+      transition={{ duration: 1.4, repeat: Infinity, repeatDelay: 1.2, ease: "easeInOut" }}
+    >
+      👋
+    </motion.span>
+  );
+}
+
 const GREETING = (
   <>
-    👋 Welcome to Vedify Solutions! I&apos;m your assistant — what would you like to know?
+    <WaveEmoji /> Welcome to Vedify Solutions! I&apos;m your assistant — what would you like to know?
   </>
 );
 
