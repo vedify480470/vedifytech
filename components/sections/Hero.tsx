@@ -6,6 +6,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, Briefcase } from "lucide-react";
 import { AppointmentForm } from "@/components/sections/AppointmentForm";
 import { Button } from "@/components/ui/button";
+import FoldText from "@/components/FoldText";
 
 export function Hero() {
   const shouldReduceMotion = useReducedMotion();
@@ -40,47 +41,79 @@ export function Hero() {
             Innovate &middot; Build &middot; Grow
           </motion.span>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mt-5 max-w-2xl leading-tight"
-          >
-            <span className="block text-2xl text-white/70 sm:text-3xl">We build</span>
-            <span className="block text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
-              Business Websites
-            </span>
-            <span className="block text-xl font-bold text-primary sm:text-2xl lg:text-3xl">
-              &amp; Custom Software (ERP, CRM)
-            </span>
-          </motion.h1>
+          <h1 className="mt-5 max-w-2xl leading-tight">
+            <div className="block">
+              <FoldText
+                text="We build"
+                splitBy="word"
+                hinge="top"
+                trigger="mount"
+                fontSize="clamp(24px, 4vw, 30px)"
+                fontWeight={600}
+                color="rgba(255,255,255,0.7)"
+              />
+            </div>
+            <div className="mt-1 block">
+              <FoldText
+                text="Business Websites"
+                splitBy="word"
+                hinge="top"
+                trigger="mount"
+                stagger={0.05}
+                fontSize="clamp(30px, 6vw, 48px)"
+                fontWeight={700}
+                color="#ffffff"
+              />
+            </div>
+            <div className="mt-1 block">
+              <FoldText
+                text="& Custom Software (ERP, CRM)"
+                splitBy="word"
+                hinge="top"
+                trigger="mount"
+                stagger={0.04}
+                fontSize="clamp(20px, 4vw, 30px)"
+                fontWeight={700}
+                color="var(--primary)"
+              />
+            </div>
+          </h1>
+
+          <div className="mt-6">
+            <FoldText
+              text="Designing • Development • Branding"
+              splitBy="word"
+              hinge="top"
+              trigger="mount"
+              stagger={0.03}
+              fontSize="clamp(16px, 2vw, 18px)"
+              fontWeight={700}
+              color="#ffffff"
+            />
+          </div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="mt-6 flex flex-wrap items-center gap-3 text-base font-bold text-white sm:text-lg"
-          >
-            <span>Designing</span>
-            <span className="size-1.5 rounded-full bg-primary" />
-            <span>Development</span>
-            <span className="size-1.5 rounded-full bg-primary" />
-            <span>Branding</span>
-          </motion.div>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="mt-6 max-w-md text-lg text-white/70"
+            className="mt-6 flex max-w-lg flex-col gap-4 text-lg text-white/70"
           >
-            Vedify Solutions is a leading software development company
-            serving businesses worldwide since 2024. We provide dynamic and
-            customized digital solutions backed by a skilled team of expert
-            developers, creative designers, and experienced internet
-            marketers, helping businesses accelerate growth through
-            innovative, scalable, and result-driven technology solutions.
-          </motion.p>
+            <p>
+              Vedify Solutions is a professional software and digital
+              business marketing organisation delivering integrated
+              technology and growth solutions to businesses across
+              industries. We operate with a global outlook while maintaining
+              strong regional expertise.
+            </p>
+            <p>
+              We provide end-to-end services encompassing custom software
+              development, digital transformation, and online business
+              marketing. Our solutions are designed to enhance operational
+              efficiency, strengthen brand presence, and enable sustainable
+              business growth in an increasingly competitive digital
+              environment.
+            </p>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}

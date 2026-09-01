@@ -13,11 +13,11 @@ import { CTA } from "@/components/sections/CTA";
 export const metadata: Metadata = {
   title: "Vedify Tech — Technology, Digital Marketing & Event Management",
   description:
-    "Vedify Tech is a Prayagraj-based technology, digital marketing, and event management company helping businesses build, grow, and connect. A brand of Vedify Solutions.",
+    "Vedify Tech is a Varanasi-based technology, digital marketing, and event management company helping businesses build, grow, and connect. A brand of Vedify Solutions.",
   openGraph: {
     title: "Vedify Tech — Technology, Digital Marketing & Event Management",
     description:
-      "Vedify Tech is a Prayagraj-based technology, digital marketing, and event management company helping businesses build, grow, and connect. A brand of Vedify Solutions.",
+      "Vedify Tech is a Varanasi-based technology, digital marketing, and event management company helping businesses build, grow, and connect. A brand of Vedify Solutions.",
     url: "https://vedifytech.com",
     siteName: "Vedify Tech",
     type: "website",

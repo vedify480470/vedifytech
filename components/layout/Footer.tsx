@@ -16,6 +16,10 @@ const bottomLinks = [
   { label: "About", href: "/about" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "Contact", href: "/contact" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms & Conditions", href: "/terms-and-conditions" },
+  { label: "Disclaimer", href: "/disclaimer" },
+  { label: "Refund Policy", href: "/refund-policy" },
 ];
 
 const socialIcons = [FacebookIcon, TwitterIcon, PinterestIcon, InstagramIcon];
@@ -45,8 +49,9 @@ export function Footer() {
               />
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
-              We design and build web, mobile, and custom software products
-              that help businesses move faster.
+              Vedify Solutions is a professional software and digital
+              business marketing organisation delivering integrated
+              technology and growth solutions across industries.
             </p>
             <div className="mt-5 flex gap-3">
               {socialIcons.map((Icon, i) => (

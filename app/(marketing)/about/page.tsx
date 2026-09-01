@@ -91,15 +91,17 @@ export default function AboutPage() {
             <Reveal direction="up" delay={0.1}>
               <SectionHeading
                 align="left"
-                eyebrow="About Vedify Tech"
-                title="A brand of Vedify Solutions"
-                description="Vedify Tech is a growing technology and business solutions brand under Vedify Solutions, offering professional IT solutions, digital marketing services and event management services to businesses, startups, organizations and brands. Our goal is simple — help businesses build, grow and connect."
+                eyebrow="About us"
+                title="Empowering businesses with intelligent digital solutions."
+                description="Vedify Solutions is a professional software and digital business marketing organisation delivering integrated technology and growth solutions to businesses across industries. With its headquarters in Pune, India, and an international office in Dubai, UAE, we operate with a global outlook while maintaining strong regional expertise."
               />
               <p className="mt-4 max-w-xl text-muted-foreground">
-                From developing a professional website or customized software
-                to building a powerful digital marketing strategy and
-                managing successful corporate events, Vedify Tech brings
-                multiple business solutions together under one roof.
+                We provide end-to-end services encompassing custom software
+                development, digital transformation, and online business
+                marketing. Our solutions are designed to enhance operational
+                efficiency, strengthen brand presence, and enable sustainable
+                business growth in an increasingly competitive digital
+                environment.
               </p>
               <Button
                 size="lg"

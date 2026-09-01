@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s | Vedify Tech",
   },
   description:
-    "Vedify Tech is a Prayagraj-based technology, digital marketing, and event management company helping businesses build, grow, and connect. A brand of Vedify Solutions.",
+    "Vedify Tech is a Varanasi-based technology, digital marketing, and event management company helping businesses build, grow, and connect. A brand of Vedify Solutions.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

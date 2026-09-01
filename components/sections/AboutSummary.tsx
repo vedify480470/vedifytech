@@ -101,7 +101,7 @@ export function AboutSummary() {
             </h2>
 
             <p className="mt-4 max-w-xl text-muted-foreground">
-              Over 25 years working in IT services developing software
+              Over 12 years working in IT services developing software
               applications and mobile apps for clients all over the world.
             </p>
 
