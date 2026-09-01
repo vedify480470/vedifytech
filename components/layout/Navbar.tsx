@@ -63,7 +63,12 @@ export function Navbar() {
   const pathname = usePathname();
 
   React.useEffect(() => {
-    const onScroll = () => setIsScrolled(window.scrollY > 80);
+    const onScroll = () => {
+      setIsScrolled((prev) => {
+        if (prev) return window.scrollY > 40;
+        return window.scrollY > 80;
+      });
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -156,13 +161,8 @@ export function Navbar() {
   );
 
   return (
-    <header className="sticky top-0 z-50 w-full">
-      <div
-        className={cn(
-          "hidden overflow-hidden border-b border-border bg-background transition-[max-height,opacity] duration-300 lg:block",
-          isScrolled ? "max-h-0 border-transparent opacity-0" : "max-h-24 opacity-100"
-        )}
-      >
+    <>
+      <div className="hidden border-b border-border bg-background lg:block">
         <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
           <Logo />
 
@@ -192,6 +192,7 @@ export function Navbar() {
         </div>
       </div>
 
+      <header className="sticky top-0 z-50 w-full">
       <div
         className={cn(
           "transition-colors duration-300",
@@ -295,6 +296,7 @@ export function Navbar() {
           </div>
         </div>
       </div>
-    </header>
+      </header>
+    </>
   );
 }

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "Vedify Tech — Technology, Digital Marketing & Event Management",
     description:
       "Vedify Tech is a Varanasi-based technology, digital marketing, and event management company helping businesses build, grow, and connect. A brand of Vedify Solutions.",
-    url: "https://vedifytech.com",
+    url: "https://www.vedifytech.com",
     siteName: "Vedify Tech",
     type: "website",
   },

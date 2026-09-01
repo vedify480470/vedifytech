@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { HeartPulse, Landmark, ShoppingCart, GraduationCap, Truck, Building2 } from "lucide-react";
+import { HeartPulse, Landmark, ShoppingCart, GraduationCap, Truck, Building2, Clapperboard } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { SectionHeading } from "@/components/shared/section-heading";
 
@@ -38,6 +38,11 @@ const industries = [
     icon: Building2,
     title: "Real Estate",
     description: "Listing platforms, CRM tools, and property management dashboards.",
+  },
+  {
+    icon: Clapperboard,
+    title: "Media & Entertainment",
+    description: "Streaming platforms, content management systems, and audience engagement tools.",
   },
 ];
 

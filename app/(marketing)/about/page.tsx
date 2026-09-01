@@ -93,7 +93,7 @@ export default function AboutPage() {
                 align="left"
                 eyebrow="About us"
                 title="Empowering businesses with intelligent digital solutions."
-                description="Vedify Solutions is a professional software and digital business marketing organisation delivering integrated technology and growth solutions to businesses across industries. With its headquarters in Pune, India, and an international office in Dubai, UAE, we operate with a global outlook while maintaining strong regional expertise."
+                description="Vedify Solutions is a professional software and digital business marketing organisation delivering integrated technology and growth solutions to businesses across industries. With its headquarters in Varanasi, India, we operate with a global outlook while maintaining strong regional expertise."
               />
               <p className="mt-4 max-w-xl text-muted-foreground">
                 We provide end-to-end services encompassing custom software

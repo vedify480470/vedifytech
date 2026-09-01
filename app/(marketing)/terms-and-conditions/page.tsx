@@ -32,7 +32,7 @@ const definitions = [
   {
     term: "Website",
     meaning:
-      "shall mean the website operated by the Company and having the following URL – vedifytech.com",
+      "shall mean the website operated by the Company and having the following URL – www.vedifytech.com",
   },
 ];
 

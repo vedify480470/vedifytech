@@ -167,7 +167,7 @@ export default function PrivacyPolicyPage() {
             <ul className="mt-4 flex flex-col gap-1 text-muted-foreground">
               <li>
                 <span className="font-semibold text-foreground">URL:</span>{" "}
-                https://vedifytech.com
+                https://www.vedifytech.com
               </li>
               <li>
                 <span className="font-semibold text-foreground">Address:</span>{" "}

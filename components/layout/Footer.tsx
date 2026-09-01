@@ -3,7 +3,6 @@ import Image from "next/image";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { services } from "@/data/services";
 import { siteInfo } from "@/data/site";
-import { NewsletterForm } from "@/components/shared/newsletter-form";
 import {
   FacebookIcon,
   TwitterIcon,
@@ -11,15 +10,11 @@ import {
   InstagramIcon,
 } from "@/components/shared/social-icons";
 
-const bottomLinks = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Portfolio", href: "/portfolio" },
-  { label: "Contact", href: "/contact" },
-  { label: "Privacy Policy", href: "/privacy-policy" },
-  { label: "Terms & Conditions", href: "/terms-and-conditions" },
-  { label: "Disclaimer", href: "/disclaimer" },
+const legalLinks = [
   { label: "Refund Policy", href: "/refund-policy" },
+  { label: "Terms and Conditions", href: "/terms-and-conditions" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Disclaimer", href: "/disclaimer" },
 ];
 
 const socialIcons = [FacebookIcon, TwitterIcon, PinterestIcon, InstagramIcon];
@@ -106,31 +101,25 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-bold">Newsletter</h3>
-            <p className="mt-5 text-sm text-muted-foreground">
-              Subscribe to get the latest updates on our services, projects,
-              and technology insights.
-            </p>
-            <div className="mt-5">
-              <NewsletterForm />
-            </div>
+            <h3 className="text-lg font-bold">Legal</h3>
+            <ul className="mt-5 flex flex-col gap-3">
+              {legalLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-muted-foreground hover:text-primary"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
         <div className="mt-14 flex flex-col items-center justify-between gap-3 border-t border-black/10 pt-6 text-sm text-muted-foreground sm:flex-row">
-          <p>© {new Date().getFullYear()} All Rights Reserved. Developed By Vedify</p>
-          <ul className="flex flex-wrap items-center gap-x-2 gap-y-1">
-            {bottomLinks.map((link, i) => (
-              <li key={link.href} className="flex items-center gap-2">
-                <Link href={link.href} className="hover:text-primary">
-                  {link.label}
-                </Link>
-                {i < bottomLinks.length - 1 && (
-                  <span className="size-1 rounded-full bg-primary" />
-                )}
-              </li>
-            ))}
-          </ul>
+          <p>© 2026 All Rights Reserved.</p>
+          <p>Developed By Vedify</p>
         </div>
       </div>
     </footer>
