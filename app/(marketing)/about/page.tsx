@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import Image from "next/image";
 import {
   Target,
   Eye,
@@ -10,9 +12,13 @@ import {
   TrendingUp,
   CheckCircle2,
   Quote,
+  ArrowRight,
 } from "lucide-react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/shared/section-heading";
+import { PageHero } from "@/components/shared/page-hero";
+import { Reveal } from "@/components/shared/reveal";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 
 export const metadata: Metadata = {
@@ -53,19 +59,58 @@ const team = [
 export default function AboutPage() {
   return (
     <>
+      <PageHero title="About" image="/images/aboutus.jpg" />
+
       <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            eyebrow="About Vedify Tech"
-            title="A brand of Vedify Solutions"
-            description="Vedify Tech is a growing technology and business solutions brand under Vedify Solutions, offering professional IT solutions, digital marketing services and event management services to businesses, startups, organizations and brands. Our goal is simple — help businesses build, grow and connect."
-          />
-          <p className="mx-auto mt-6 max-w-2xl text-center text-muted-foreground">
-            From developing a professional website or customized software to
-            building a powerful digital marketing strategy and managing
-            successful corporate events, Vedify Tech brings multiple business
-            solutions together under one roof.
-          </p>
+          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+            <Reveal direction="up" className="relative mx-auto w-full max-w-md">
+              <div
+                className="absolute -inset-4 -z-10 rounded-[3rem] bg-primary/10 blur-2xl"
+                aria-hidden="true"
+              />
+              <div className="relative aspect-square w-full overflow-hidden rounded-[3rem] rounded-tr-none shadow-xl">
+                <Image
+                  src="/images/about-3.png"
+                  alt="Vedify Tech team collaborating"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 448px"
+                  className="object-cover"
+                />
+              </div>
+              <div
+                className="absolute -bottom-6 -right-6 -z-10 grid grid-cols-5 gap-2"
+                aria-hidden="true"
+              >
+                {Array.from({ length: 15 }).map((_, i) => (
+                  <span key={i} className="size-1.5 rounded-full bg-primary/30" />
+                ))}
+              </div>
+            </Reveal>
+
+            <Reveal direction="up" delay={0.1}>
+              <SectionHeading
+                align="left"
+                eyebrow="About Vedify Tech"
+                title="A brand of Vedify Solutions"
+                description="Vedify Tech is a growing technology and business solutions brand under Vedify Solutions, offering professional IT solutions, digital marketing services and event management services to businesses, startups, organizations and brands. Our goal is simple — help businesses build, grow and connect."
+              />
+              <p className="mt-4 max-w-xl text-muted-foreground">
+                From developing a professional website or customized software
+                to building a powerful digital marketing strategy and
+                managing successful corporate events, Vedify Tech brings
+                multiple business solutions together under one roof.
+              </p>
+              <Button
+                size="lg"
+                className="mt-8 rounded-full bg-primary hover:opacity-90"
+                render={<Link href="/contact" />}
+              >
+                Get in Touch
+                <ArrowRight className="size-4" />
+              </Button>
+            </Reveal>
+          </div>
         </div>
       </section>
 

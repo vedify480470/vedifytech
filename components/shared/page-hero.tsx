@@ -4,9 +4,11 @@ import Image from "next/image";
 export function PageHero({
   title,
   image,
+  crumbs = [],
 }: {
   title: string;
   image: string;
+  crumbs?: { label: string; href: string }[];
 }) {
   return (
     <section className="relative flex h-64 items-center justify-center overflow-hidden sm:h-80">
@@ -26,6 +28,14 @@ export function PageHero({
           <Link href="/" className="hover:text-white">
             Home
           </Link>
+          {crumbs.map((crumb) => (
+            <span key={crumb.href} className="flex items-center gap-2">
+              <span>/</span>
+              <Link href={crumb.href} className="hover:text-white">
+                {crumb.label}
+              </Link>
+            </span>
+          ))}
           <span>/</span>
           <span>{title}</span>
         </div>

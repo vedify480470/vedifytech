@@ -19,7 +19,7 @@ export const services: Service[] = [
     description:
       "We design and build custom websites, ecommerce storefronts, and web applications using modern frameworks, tuned for performance, SEO, and conversion.",
     icon: Code2,
-    image: "/images/2.png",
+    image: "/images/services/web_development.png",
     features: [
       "Custom Websites",
       "Ecommerce",
@@ -36,7 +36,7 @@ export const services: Service[] = [
     description:
       "From native Android and iOS apps to cross-platform builds with Flutter and React Native, we ship mobile experiences that are fast, reliable, and easy to maintain.",
     icon: Smartphone,
-    image: "/images/5.png",
+    image: "/images/services/mobile_app_development.png",
     features: ["Android", "iOS", "Flutter", "React Native"],
   },
   {
@@ -47,7 +47,7 @@ export const services: Service[] = [
     description:
       "We architect and build custom software systems tailored to your operations, from internal tools to full-scale platforms.",
     icon: Layers,
-    image: "/images/1.png",
+    image: "/images/services/custom_software_development.png",
     features: ["ERP", "CRM", "SaaS", "HRMS", "POS", "Inventory Systems"],
   },
   {
@@ -58,7 +58,7 @@ export const services: Service[] = [
     description:
       "Our cloud experts help you move to the cloud, automate deployments, and keep costs under control across AWS, Azure, and GCP.",
     icon: Cloud,
-    image: "/images/4.png",
+    image: "/images/services/cloud_solution.png",
     features: [
       "Cloud Migration",
       "AWS/Azure/GCP Setup",
@@ -76,7 +76,7 @@ export const services: Service[] = [
     description:
       "We provide ongoing support and maintenance for existing applications, from bug fixes and updates to full-time monitoring.",
     icon: LifeBuoy,
-    image: "/images/6.png",
+    image: "/images/services/software_maintenance_support.png",
     features: [
       "Bug Fixes",
       "Performance Optimization",
@@ -96,7 +96,7 @@ export const services: Service[] = [
     description:
       "Our design team crafts research-backed, user-centered experiences from wireframe to polished visual design system.",
     icon: PenTool,
-    image: "/images/3.png",
+    image: "/images/services/ui_ux_designer.png",
     features: [
       "User Research",
       "Wireframing",
@@ -114,7 +114,7 @@ export const services: Service[] = [
     description:
       "We help businesses build their online presence, reach potential customers, and generate business opportunities through strategic, data-driven digital marketing.",
     icon: Megaphone,
-    image: "/images/3.png",
+    image: "/images/services/digital_marketing.png",
     features: [
       "Search Engine Optimization (SEO)",
       "Social Media Marketing",
@@ -133,7 +133,7 @@ export const services: Service[] = [
     description:
       "We provide professional planning and execution for corporate, promotional, and business events, helping brands create memorable experiences and meaningful connections.",
     icon: PartyPopper,
-    image: "/images/5.png",
+    image: "/images/services/event_management.png",
     features: [
       "Corporate Events",
       "Product Launches",
