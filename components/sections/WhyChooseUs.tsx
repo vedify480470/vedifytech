@@ -1,5 +1,6 @@
 import { Code2, TrendingUp, PartyPopper } from "lucide-react";
 import { SectionHeading } from "@/components/shared/section-heading";
+import { Reveal } from "@/components/shared/reveal";
 
 const pillars = [
   {
@@ -28,19 +29,18 @@ export function WhyChooseUs() {
           title="One Partner. Three Powerful Business Solutions."
         />
         <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-3">
-          {pillars.map((pillar) => (
-            <div
-              key={pillar.title}
-              className="rounded-2xl border border-border bg-background p-8 text-center"
-            >
-              <div className="mx-auto flex size-14 items-center justify-center rounded-2xl bg-primary/10">
-                <pillar.icon className="size-7 text-primary" />
+          {pillars.map((pillar, i) => (
+            <Reveal key={pillar.title} direction="up" delay={i * 0.1}>
+              <div className="rounded-2xl border border-border bg-background p-8 text-center">
+                <div className="mx-auto flex size-14 items-center justify-center rounded-2xl bg-primary/10">
+                  <pillar.icon className="size-7 text-primary" />
+                </div>
+                <h3 className="mt-5 text-lg font-bold">{pillar.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  {pillar.description}
+                </p>
               </div>
-              <h3 className="mt-5 text-lg font-bold">{pillar.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                {pillar.description}
-              </p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

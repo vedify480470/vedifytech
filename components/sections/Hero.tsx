@@ -16,6 +16,7 @@ export function Hero() {
         fill
         priority
         quality={90}
+        sizes="100vw"
         className="object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-neutral-900/65 via-neutral-900/40 to-neutral-900/10" />
@@ -65,7 +66,7 @@ export function Hero() {
           >
             <Button
               size="lg"
-              className="rounded-full bg-gradient-to-r from-[#03228f] to-[#0e73e4] hover:opacity-90"
+              className="rounded-full bg-primary hover:opacity-90"
               render={<Link href="/contact" />}
             >
               Start a Project

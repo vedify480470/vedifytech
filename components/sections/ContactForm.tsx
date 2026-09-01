@@ -14,6 +14,7 @@ import {
   FormItem,
   FormMessage,
 } from "@/components/ui/form";
+import { Reveal } from "@/components/shared/reveal";
 
 const fieldClassName =
   "h-14 border-0 bg-muted/60 px-5 placeholder:text-muted-foreground";
@@ -40,6 +41,7 @@ export function ContactForm() {
   }
 
   return (
+    <Reveal direction="up">
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-5">
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
@@ -127,11 +129,12 @@ export function ContactForm() {
         <Button
           type="submit"
           size="lg"
-          className="mt-2 self-start rounded-full bg-gradient-to-r from-[#03228f] to-[#0e73e4] px-8 hover:opacity-90"
+          className="mt-2 self-start rounded-full bg-primary px-8 hover:opacity-90"
         >
           Submit Now
         </Button>
       </form>
     </Form>
+    </Reveal>
   );
 }

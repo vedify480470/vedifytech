@@ -197,7 +197,7 @@ export function Navbar() {
           "transition-colors duration-300",
           isScrolled
             ? "border-b border-border bg-white text-neutral-900 shadow-sm"
-            : "bg-gradient-to-r from-[#03228f] via-[#0b4fc4] to-[#0e73e4] text-white"
+            : "bg-secondary text-white"
         )}
       >
         <div className="container mx-auto flex h-18 items-center justify-between px-4 sm:px-6 lg:hidden">

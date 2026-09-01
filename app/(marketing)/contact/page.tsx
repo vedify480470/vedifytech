@@ -23,7 +23,7 @@ export default function ContactPage() {
       <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-[380px_1fr]">
-            <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#03228f] to-[#5b8def] px-8 py-12 text-white">
+            <div className="relative overflow-hidden rounded-2xl bg-primary px-8 py-12 text-white">
               <span className="text-xs font-semibold tracking-widest text-white/70">
                 LET&apos;S TALK
               </span>

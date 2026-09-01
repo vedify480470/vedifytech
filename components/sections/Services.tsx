@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { services } from "@/data/services";
 
@@ -35,15 +36,27 @@ export function Services() {
             >
               <Link
                 href={`/services/${service.slug}`}
-                className="block h-full rounded-2xl bg-white p-8 shadow-md transition-shadow hover:shadow-xl"
+                className="group block h-full overflow-hidden rounded-2xl bg-white shadow-md transition-shadow hover:shadow-xl"
               >
-                <div className="flex size-16 items-center justify-center rounded-2xl bg-primary/10">
-                  <service.icon className="size-8 text-primary" aria-hidden="true" />
+                <div className="relative h-44 w-full overflow-hidden">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/50 via-black/0 to-black/0" />
+                  <div className="absolute bottom-0 left-0 flex size-14 items-center justify-center rounded-tr-2xl bg-primary">
+                    <service.icon className="size-7 text-primary-foreground" aria-hidden="true" />
+                  </div>
                 </div>
-                <h3 className="mt-6 text-xl font-bold">{service.title}</h3>
-                <p className="mt-3 text-muted-foreground">
-                  {service.shortDescription}
-                </p>
+                <div className="p-8">
+                  <h3 className="text-xl font-bold">{service.title}</h3>
+                  <p className="mt-3 text-muted-foreground">
+                    {service.shortDescription}
+                  </p>
+                </div>
               </Link>
             </motion.div>
           ))}

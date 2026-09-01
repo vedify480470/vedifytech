@@ -40,7 +40,7 @@ export function NewsletterForm() {
         type="submit"
         size="icon"
         aria-label="Subscribe"
-        className="size-12 shrink-0 rounded-full bg-gradient-to-r from-[#03228f] to-[#0e73e4] hover:opacity-90"
+        className="size-12 shrink-0 rounded-full bg-primary hover:opacity-90"
       >
         <Send className="size-4" />
       </Button>

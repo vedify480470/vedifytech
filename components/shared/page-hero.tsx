@@ -10,7 +10,14 @@ export function PageHero({
 }) {
   return (
     <section className="relative flex h-64 items-center justify-center overflow-hidden sm:h-80">
-      <Image src={image} alt="" fill priority className="object-cover" />
+      <Image
+        src={image}
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
+      />
       <div className="absolute inset-0 bg-black/50" />
 
       <div className="relative text-center text-white">

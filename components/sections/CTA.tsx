@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Reveal } from "@/components/shared/reveal";
 
 export function CTA() {
   return (
     <section className="py-12 md:py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-3xl bg-primary px-6 py-16 text-center sm:px-16">
+        <Reveal direction="up" className="relative overflow-hidden rounded-3xl bg-primary px-6 py-16 text-center sm:px-16">
           <h2 className="text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl">
             Ready to Build, Grow &amp; Connect?
           </h2>
@@ -24,7 +25,7 @@ export function CTA() {
             Start a Project
             <ArrowRight className="size-4" />
           </Button>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

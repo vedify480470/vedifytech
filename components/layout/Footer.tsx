@@ -28,6 +28,7 @@ export function Footer() {
         alt=""
         fill
         aria-hidden="true"
+        sizes="100vw"
         className="object-cover object-center"
       />
 

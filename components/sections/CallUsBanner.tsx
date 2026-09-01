@@ -17,12 +17,13 @@ export function CallUsBanner() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section className="relative overflow-hidden bg-[#000060] pt-16 sm:pt-20">
+    <section className="relative overflow-hidden bg-secondary pt-16 sm:pt-20">
       <Image
         src="/images/testimonial-bg.png"
         alt=""
         fill
         aria-hidden="true"
+        sizes="100vw"
         className="object-cover object-center opacity-40"
       />
 
@@ -93,7 +94,7 @@ export function CallUsBanner() {
 
             <Button
               size="lg"
-              className="mt-8 rounded-full bg-gradient-to-r from-[#03228f] to-[#0e73e4] hover:opacity-90"
+              className="mt-8 rounded-full bg-primary hover:opacity-90"
               render={<Link href="/contact" />}
             >
               Let&apos;s Talk
@@ -114,6 +115,7 @@ export function CallUsBanner() {
           alt=""
           fill
           aria-hidden="true"
+          sizes="100vw"
           className="object-cover object-center opacity-70 mix-blend-multiply"
         />
         <div className="relative grid grid-cols-3 divide-x divide-border text-center">

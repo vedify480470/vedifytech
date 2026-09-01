@@ -5,6 +5,7 @@ import { testimonials } from "@/data/testimonials";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { SectionHeading } from "@/components/shared/section-heading";
+import { Reveal } from "@/components/shared/reveal";
 import {
   Carousel,
   CarouselContent,
@@ -22,7 +23,8 @@ export function Testimonials() {
           title="What our clients say"
         />
 
-        <Carousel className="mt-12 w-full max-w-4xl mx-auto">
+        <Reveal direction="up" delay={0.1} className="mt-12">
+        <Carousel className="w-full max-w-4xl mx-auto">
           <CarouselContent>
             {testimonials.map((t) => (
               <CarouselItem key={t.id} className="sm:basis-1/2">
@@ -61,6 +63,7 @@ export function Testimonials() {
           <CarouselPrevious className="hidden sm:flex" />
           <CarouselNext className="hidden sm:flex" />
         </Carousel>
+        </Reveal>
       </div>
     </section>
   );

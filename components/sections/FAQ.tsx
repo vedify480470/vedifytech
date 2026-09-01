@@ -6,6 +6,7 @@ import {
   AccordionContent,
 } from "@/components/ui/accordion";
 import { SectionHeading } from "@/components/shared/section-heading";
+import { Reveal } from "@/components/shared/reveal";
 
 export function FAQ() {
   return (
@@ -13,7 +14,8 @@ export function FAQ() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading eyebrow="FAQ" title="Frequently asked questions" />
 
-        <Accordion className="mx-auto mt-12 max-w-2xl">
+        <Reveal direction="up" delay={0.1} className="mx-auto mt-12 max-w-2xl">
+        <Accordion>
           {faqItems.map((item) => (
             <AccordionItem key={item.id} value={item.id}>
               <AccordionTrigger>{item.question}</AccordionTrigger>
@@ -21,6 +23,7 @@ export function FAQ() {
             </AccordionItem>
           ))}
         </Accordion>
+        </Reveal>
       </div>
     </section>
   );

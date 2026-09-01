@@ -145,7 +145,7 @@ export default function AboutPage() {
 
       <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl rounded-2xl bg-gradient-to-br from-[#03228f] to-[#5b8def] p-10 text-center text-white">
+          <div className="mx-auto max-w-2xl rounded-2xl bg-primary p-10 text-center text-white">
             <Quote className="mx-auto size-8 text-white/70" />
             <h3 className="mt-4 text-xl font-bold">Our Promise</h3>
             <p className="mt-3 text-white/80">

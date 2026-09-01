@@ -114,7 +114,7 @@ export function AppointmentForm() {
           <Button
             type="submit"
             size="lg"
-            className="mt-2 h-12 w-full bg-gradient-to-r from-[#03228f] to-[#0e73e4] text-base hover:opacity-90"
+            className="mt-2 h-12 w-full bg-primary text-base hover:opacity-90"
           >
             Submit Now
           </Button>

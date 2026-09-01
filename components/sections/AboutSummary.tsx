@@ -36,6 +36,7 @@ export function AboutSummary() {
                   src="/images/about-part-1.png"
                   alt="Team member reviewing documents"
                   fill
+                  sizes="(max-width: 640px) 12rem, 14rem"
                   className="object-cover"
                 />
               </motion.div>
@@ -57,6 +58,7 @@ export function AboutSummary() {
                   src="/images/about-part-2.png"
                   alt="Developers collaborating on a laptop"
                   fill
+                  sizes="(max-width: 640px) 20rem, 24rem"
                   className="object-cover"
                 />
               </motion.div>
@@ -78,6 +80,7 @@ export function AboutSummary() {
                   src="/images/about-part-3.png"
                   alt="Team working together in the office"
                   fill
+                  sizes="(max-width: 640px) 16rem, 18rem"
                   className="object-cover"
                 />
               </motion.div>
@@ -115,7 +118,7 @@ export function AboutSummary() {
                       whileInView={{ scaleX: skill.value / 100 }}
                       viewport={{ once: true }}
                       transition={{ duration: 1, ease: "easeOut" }}
-                      className="h-full w-full origin-left rounded-full bg-gradient-to-r from-[#03228f] to-[#0e73e4]"
+                      className="h-full w-full origin-left rounded-full bg-primary"
                     />
                   </div>
                 </div>
@@ -124,7 +127,7 @@ export function AboutSummary() {
 
             <Button
               size="lg"
-              className="mt-10 rounded-full bg-gradient-to-r from-[#03228f] to-[#0e73e4] hover:opacity-90"
+              className="mt-10 rounded-full bg-primary hover:opacity-90"
               render={<Link href="/about" />}
             >
               Learn-More

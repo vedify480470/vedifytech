@@ -1,13 +1,14 @@
 import { CheckCircle2 } from "lucide-react";
 import type { Service } from "@/types";
 import { CTA } from "@/components/sections/CTA";
+import { Reveal } from "@/components/shared/reveal";
 
 export function ServiceDetail({ service }: { service: Service }) {
   return (
     <>
       <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
+          <Reveal direction="up" className="mx-auto max-w-3xl text-center">
             <div className="mx-auto flex size-14 items-center justify-center rounded-2xl bg-primary/10">
               <service.icon className="size-7 text-primary" />
             </div>
@@ -15,17 +16,16 @@ export function ServiceDetail({ service }: { service: Service }) {
               {service.title}
             </h1>
             <p className="mt-4 text-muted-foreground">{service.description}</p>
-          </div>
+          </Reveal>
 
           <div className="mx-auto mt-14 grid max-w-3xl grid-cols-1 gap-4 sm:grid-cols-2">
-            {service.features.map((feature) => (
-              <div
-                key={feature}
-                className="flex items-center gap-3 rounded-xl border border-border p-4"
-              >
-                <CheckCircle2 className="size-5 shrink-0 text-primary" />
-                <span className="text-sm font-medium">{feature}</span>
-              </div>
+            {service.features.map((feature, i) => (
+              <Reveal key={feature} direction="up" delay={(i % 4) * 0.05}>
+                <div className="flex items-center gap-3 rounded-xl border border-border p-4">
+                  <CheckCircle2 className="size-5 shrink-0 text-primary" />
+                  <span className="text-sm font-medium">{feature}</span>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>

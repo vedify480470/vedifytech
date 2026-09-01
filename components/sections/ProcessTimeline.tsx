@@ -30,7 +30,7 @@ export function ProcessTimeline() {
             </h2>
             <Button
               size="lg"
-              className="mt-10 rounded-lg bg-gradient-to-r from-[#03228f] to-[#5b8def] hover:opacity-90"
+              className="mt-10 rounded-lg bg-primary hover:opacity-90"
               render={<Link href="/contact" />}
             >
               Contact Us

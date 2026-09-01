@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { Reveal } from "@/components/shared/reveal";
 
 export function SectionHeading({
   eyebrow,
@@ -14,7 +15,8 @@ export function SectionHeading({
   align?: "center" | "left";
 }) {
   return (
-    <div
+    <Reveal
+      direction="up"
       className={cn(
         "flex flex-col gap-3",
         align === "center" ? "items-center text-center" : "items-start text-left",
@@ -32,6 +34,6 @@ export function SectionHeading({
           {description}
         </p>
       )}
-    </div>
+    </Reveal>
   );
 }
