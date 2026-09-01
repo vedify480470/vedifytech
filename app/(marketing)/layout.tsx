@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollToTop } from "@/components/shared/scroll-to-top";
+import { Chatbot } from "@/components/shared/chatbot";
 
 export default function MarketingLayout({
   children,
@@ -13,6 +14,7 @@ export default function MarketingLayout({
       <main className="flex-1">{children}</main>
       <Footer />
       <ScrollToTop />
+      <Chatbot />
     </>
   );
 }
