@@ -8,7 +8,7 @@ import { SectionHeading } from "@/components/shared/section-heading";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "IT solutions, digital marketing, and event management services from Vedify Tech — everything a business needs to build, grow, and connect.",
+    "IT solutions, digital marketing, and event management services from Vedify Solutions — everything a business needs to build, grow, and connect.",
 };
 
 export default function ServicesPage() {

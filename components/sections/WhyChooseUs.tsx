@@ -25,7 +25,7 @@ export function WhyChooseUs() {
     <section className="py-12 md:py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow="Why Vedify Tech"
+          eyebrow="Why Vedify Solutions"
           title="One Partner. Three Powerful Business Solutions."
         />
         <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-3">

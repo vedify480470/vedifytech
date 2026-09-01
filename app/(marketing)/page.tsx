@@ -11,15 +11,15 @@ import { FAQ } from "@/components/sections/FAQ";
 import { CTA } from "@/components/sections/CTA";
 
 export const metadata: Metadata = {
-  title: "Vedify Tech — Technology, Digital Marketing & Event Management",
+  title: "Vedify Solutions — Technology, Digital Marketing & Event Management",
   description:
-    "Vedify Tech is a Varanasi-based technology, digital marketing, and event management company helping businesses build, grow, and connect. A brand of Vedify Solutions.",
+    "Vedify Solutions is a Varanasi-based technology, digital marketing, and event management company helping businesses build, grow, and connect.",
   openGraph: {
-    title: "Vedify Tech — Technology, Digital Marketing & Event Management",
+    title: "Vedify Solutions — Technology, Digital Marketing & Event Management",
     description:
-      "Vedify Tech is a Varanasi-based technology, digital marketing, and event management company helping businesses build, grow, and connect. A brand of Vedify Solutions.",
+      "Vedify Solutions is a Varanasi-based technology, digital marketing, and event management company helping businesses build, grow, and connect.",
     url: "https://www.vedifytech.com",
-    siteName: "Vedify Tech",
+    siteName: "Vedify Solutions",
     type: "website",
   },
 };

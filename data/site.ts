@@ -1,7 +1,6 @@
 export const siteInfo = {
-  name: "Vedify Tech",
+  name: "Vedify Solutions",
   tagline: "Technology • Digital Marketing • Event Management",
-  parentBrand: "A Brand of Vedify Solutions",
   address: "C21, Maidagin Varanasi, UP, 221001, India",
   email: "info@vedifytech.com",
   phone: "+91-9140828871",

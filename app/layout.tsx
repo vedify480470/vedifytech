@@ -17,11 +17,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Vedify Tech — Technology, Digital Marketing & Event Management",
-    template: "%s | Vedify Tech",
+    default: "Vedify Solutions — Technology, Digital Marketing & Event Management",
+    template: "%s | Vedify Solutions",
   },
   description:
-    "Vedify Tech is a Varanasi-based technology, digital marketing, and event management company helping businesses build, grow, and connect. A brand of Vedify Solutions.",
+    "Vedify Solutions is a Varanasi-based technology, digital marketing, and event management company helping businesses build, grow, and connect.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

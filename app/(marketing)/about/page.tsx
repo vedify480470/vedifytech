@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import {
-  Target,
-  Eye,
   Lightbulb,
   BadgeCheck,
   MessageSquare,
@@ -24,7 +22,7 @@ import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Vedify Tech is a growing technology and business solutions brand under Vedify Solutions, offering IT solutions, digital marketing, and event management services.",
+    "Vedify Solutions is a growing technology and business solutions company offering IT solutions, digital marketing, and event management services.",
 };
 
 const missionPoints = [
@@ -72,7 +70,7 @@ export default function AboutPage() {
               <div className="relative aspect-square w-full overflow-hidden rounded-[3rem] rounded-tr-none shadow-xl">
                 <Image
                   src="/images/about-3.png"
-                  alt="Vedify Tech team collaborating"
+                  alt="Vedify Solutions team collaborating"
                   fill
                   sizes="(max-width: 1024px) 100vw, 448px"
                   className="object-cover"
@@ -117,35 +115,84 @@ export default function AboutPage() {
       </section>
 
       <section className="py-12 md:py-16 bg-muted/30">
-        <div className="container mx-auto grid grid-cols-1 gap-8 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
-          <div className="rounded-2xl border border-border bg-background p-8">
-            <Eye className="size-8 text-primary" />
-            <h3 className="mt-4 text-xl font-semibold">Our Vision</h3>
-            <p className="mt-2 text-muted-foreground">
-              To become a trusted and innovative business solutions brand
-              that empowers businesses through technology, digital growth
-              and impactful experiences. We envision a future where
-              businesses can access the right combination of technology,
-              digital marketing and event solutions from one trusted
-              partner.
-            </p>
-          </div>
-          <div className="rounded-2xl border border-border bg-background p-8">
-            <Target className="size-8 text-primary" />
-            <h3 className="mt-4 text-xl font-semibold">Our Mission</h3>
-            <p className="mt-2 text-muted-foreground">
-              Our mission is to help businesses build stronger brands, adopt
-              smarter technology and create meaningful connections with
-              their customers.
-            </p>
-            <ul className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
-              {missionPoints.map((point) => (
-                <li key={point} className="flex items-start gap-2 text-sm">
-                  <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-primary" />
-                  <span className="text-muted-foreground">{point}</span>
-                </li>
-              ))}
-            </ul>
+        <div className="container mx-auto flex flex-col gap-12 px-4 sm:px-6 lg:px-8">
+          <Reveal direction="up" className="relative overflow-hidden rounded-3xl">
+            <div className="relative h-105 w-full sm:h-115">
+              <Image
+                src="/images/our_vision.png"
+                alt="Vedify Solutions office"
+                fill
+                sizes="100vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-linear-to-r from-black/75 via-black/45 to-transparent" />
+            </div>
+            <div className="absolute inset-0 flex items-center">
+              <div className="max-w-lg px-8 text-white sm:px-14">
+                <span className="inline-block rounded-full bg-primary/20 px-4 py-1 text-xs font-semibold tracking-wide text-primary">
+                  OUR VISION
+                </span>
+                <h3 className="mt-4 text-3xl font-bold sm:text-4xl">
+                  Empowering Growth Through Technology
+                </h3>
+                <p className="mt-4 text-white/80">
+                  To become a trusted and innovative business solutions brand
+                  that empowers businesses through technology, digital growth
+                  and impactful experiences. We envision a future where
+                  businesses can access the right combination of technology,
+                  digital marketing and event solutions from one trusted
+                  partner.
+                </p>
+              </div>
+            </div>
+          </Reveal>
+
+          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
+            <Reveal direction="up">
+              <span className="inline-block rounded-full bg-primary/10 px-4 py-1 text-xs font-semibold tracking-wide text-primary">
+                OUR MISSION
+              </span>
+              <h3 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
+                Building Stronger Brands &amp; Smarter Tech
+              </h3>
+              <p className="mt-4 text-muted-foreground">
+                Our mission is to help businesses build stronger brands, adopt
+                smarter technology and create meaningful connections with
+                their customers. We achieve this through a relentless focus
+                on our core commitments.
+              </p>
+              <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                {missionPoints.map((point) => (
+                  <li key={point} className="flex items-start gap-2 text-sm">
+                    <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-primary" />
+                    <span className="text-muted-foreground">{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+
+            <Reveal direction="up" delay={0.1} className="relative">
+              <div className="relative aspect-square w-full overflow-hidden rounded-3xl shadow-xl">
+                <Image
+                  src="/images/our_mission.png"
+                  alt="Vedify Solutions team collaborating around a strategy table"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="absolute inset-x-4 bottom-4 flex items-center gap-3 rounded-xl bg-background/95 p-4 shadow-lg backdrop-blur">
+                <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+                  <Sparkles className="size-5" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold">Collaborative Innovation</p>
+                  <p className="text-xs text-muted-foreground">
+                    Driving results through unified expertise.
+                  </p>
+                </div>
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -171,7 +218,7 @@ export default function AboutPage() {
 
       <section className="py-12 md:py-16 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading eyebrow="Team" title="The people behind Vedify Tech" />
+          <SectionHeading eyebrow="Team" title="The people behind Vedify Solutions" />
           <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {team.map((member) => (
               <div key={member.name} className="flex items-center gap-4 rounded-xl border border-border bg-background p-4">
@@ -190,23 +237,19 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-12 md:py-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl rounded-2xl bg-primary p-10 text-center text-white">
-            <Quote className="mx-auto size-8 text-white/70" />
-            <h3 className="mt-4 text-xl font-bold">Our Promise</h3>
-            <p className="mt-3 text-white/80">
-              At Vedify Tech, we believe every business deserves solutions
-              that are smart, practical and scalable. We listen to your
-              requirements, understand your challenges and create solutions
-              designed around your business goals.
-            </p>
-            <p className="mt-4 font-semibold">
-              Your business goals become our project goals.
-            </p>
-          </div>
-        </div>
-      </section>
+      <div className="bg-primary px-6 py-16 text-center text-white sm:px-16">
+        <Quote className="mx-auto size-8 text-white/70" />
+        <h3 className="mt-4 text-xl font-bold">Our Promise</h3>
+        <p className="mx-auto mt-3 max-w-2xl text-white/80">
+          At Vedify Solutions, we believe every business deserves solutions
+          that are smart, practical and scalable. We listen to your
+          requirements, understand your challenges and create solutions
+          designed around your business goals.
+        </p>
+        <p className="mt-4 font-semibold">
+          Your business goals become our project goals.
+        </p>
+      </div>
     </>
   );
 }
