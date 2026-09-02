@@ -32,7 +32,6 @@ const HERO_SLIDES: HeroSlide[] = [
     ],
     description: [
       "Vedify Solutions is a professional software and digital business marketing organisation delivering integrated technology and growth solutions to businesses across industries. We operate with a global outlook while maintaining strong regional expertise.",
-      "We provide end-to-end services encompassing custom software development, digital transformation, and online business marketing. Our solutions are designed to enhance operational efficiency, strengthen brand presence, and enable sustainable business growth in an increasingly competitive digital environment.",
     ],
     ctas: [
       { label: "Start your project", href: "/contact", variant: "primary", icon: "arrow" },
