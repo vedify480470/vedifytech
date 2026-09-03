@@ -15,6 +15,7 @@ import {
   TwitterIcon,
   PinterestIcon,
   InstagramIcon,
+  YoutubeIcon,
 } from "@/components/shared/social-icons";
 import {
   NavigationMenu,
@@ -33,7 +34,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-const socialIcons = [FacebookIcon, TwitterIcon, PinterestIcon, InstagramIcon];
+const socialIcons = [FacebookIcon, TwitterIcon, PinterestIcon, InstagramIcon, YoutubeIcon];
 
 function Logo({ onDark = false }: { onDark?: boolean }) {
   return (
@@ -149,6 +150,8 @@ export function Navbar() {
                 key={i}
                 href={siteInfo.socials[i]?.href ?? "#"}
                 aria-label={siteInfo.socials[i]?.label}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex size-9 items-center justify-center rounded-full bg-muted text-muted-foreground transition hover:bg-primary hover:text-primary-foreground"
               >
                 <Icon className="size-4" />
@@ -282,6 +285,8 @@ export function Navbar() {
                   key={i}
                   href={siteInfo.socials[i]?.href ?? "#"}
                   aria-label={siteInfo.socials[i]?.label}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={cn(
                     "transition",
                     isScrolled

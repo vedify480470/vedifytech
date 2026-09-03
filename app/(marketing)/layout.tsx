@@ -2,6 +2,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollToTop } from "@/components/shared/scroll-to-top";
 import { Chatbot } from "@/components/shared/chatbot";
+import { MarketingPopup } from "@/components/shared/marketing-popup";
 
 export default function MarketingLayout({
   children,
@@ -15,6 +16,7 @@ export default function MarketingLayout({
       <Footer />
       <ScrollToTop />
       <Chatbot />
+      <MarketingPopup />
     </>
   );
 }

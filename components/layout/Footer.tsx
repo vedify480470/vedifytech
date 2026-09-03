@@ -8,6 +8,7 @@ import {
   TwitterIcon,
   PinterestIcon,
   InstagramIcon,
+  YoutubeIcon,
 } from "@/components/shared/social-icons";
 
 const legalLinks = [
@@ -17,7 +18,7 @@ const legalLinks = [
   { label: "Disclaimer", href: "/disclaimer" },
 ];
 
-const socialIcons = [FacebookIcon, TwitterIcon, PinterestIcon, InstagramIcon];
+const socialIcons = [FacebookIcon, TwitterIcon, PinterestIcon, InstagramIcon, YoutubeIcon];
 
 export function Footer() {
   return (
@@ -54,6 +55,8 @@ export function Footer() {
                   key={i}
                   href={siteInfo.socials[i]?.href ?? "#"}
                   aria-label={siteInfo.socials[i]?.label}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex size-9 items-center justify-center rounded-full bg-white text-primary shadow-sm transition-colors hover:bg-primary hover:text-white"
                 >
                   <Icon className="size-4" />

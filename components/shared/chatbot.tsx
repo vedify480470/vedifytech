@@ -196,8 +196,6 @@ export function Chatbot() {
     if (seen) return;
 
     const timer = setTimeout(() => {
-      setIsOpen(true);
-      setMessages([{ id: "greeting", role: "bot", text: GREETING }]);
       window.localStorage.setItem(SEEN_KEY, "1");
       playRingTone();
       setIsRinging(true);
